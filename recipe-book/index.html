@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor | Premium Recipes</title>
+    <meta name="description" content="Discover, cook, and share the best premium recipes.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Glassmorphic Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#/home" class="logo">
+                <i class="ph-fill ph-cooking-pot"></i>
+                <span>Savor</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#/home" class="nav-link active">Home</a>
+                <a href="#/recipes" class="nav-link">Explore</a>
+                <a href="#/categories" class="nav-link">Categories</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn search-trigger" aria-label="Search">
+                    <i class="ph ph-magnifying-glass"></i>
+                </button>
+                <div id="auth-nav-section">
+                    <!-- Injected by JS based on auth state -->
+                </div>
+                <button class="mobile-menu-btn icon-btn d-none" aria-label="Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container for SPA -->
+    <main id="app-root">
+        <!-- Views will be injected here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="ph-fill ph-cooking-pot"></i>
+                    <span>Savor</span>
+                </div>
+                <p>Bringing premium culinary experiences to your home kitchen.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Explore</h4>
+                    <a href="#/recipes">All Recipes</a>
+                    <a href="#/categories">Categories</a>
+                    <a href="#/submit">Submit Recipe</a>
+                </div>
+                <div class="link-group">
+                    <h4>About</h4>
+                    <a href="#/about">Our Story</a>
+                    <a href="#/contact">Contact Us</a>
+                    <a href="#/database">Raw Database</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Savor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Global Search Overlay -->
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-modal">
+            <button class="close-search icon-btn"><i class="ph ph-x"></i></button>
+            <input type="text" id="global-search-input" placeholder="Search for recipes, ingredients...">
+            <div id="quick-search-results" class="quick-results"></div>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
